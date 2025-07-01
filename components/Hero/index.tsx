@@ -47,7 +47,7 @@ const HeroPage = () => {
               Dùng thử miễn phí
             </a>
             <a
-              href="https://getastrothemes.com/"
+              href="https://app.chatx.vn/install"
               className="inline-flex items-center gap-2.5 rounded-full bg-black/20 px-6 py-3 font-medium text-black hover:opacity-90 dark:bg-white dark:text-black"
             >
               Liên hệ tư vấn
@@ -56,7 +56,7 @@ const HeroPage = () => {
         </div>
         <dl className="lg:gap-x-8 lg:grid-cols-3 max-w-4xl mt-8 mx-auto sm:gap-x-6 sm:gap-y-12 sm:grid sm:grid-cols-2 sm:space-y-0 space-y-6 text-center text-sm items-start">
           {featuresList.map(({ title, description }) => (
-            <div key={title} className="text-base-500 lg:text-balance">
+            <div key={title} className="text-black lg:text-balance">
               <strong className="">{title}</strong> ━ {description}
             </div>
           ))}

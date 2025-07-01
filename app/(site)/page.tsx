@@ -12,16 +12,19 @@ import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
+import Head from "next/head";
+
 
 export const metadata: Metadata = {
   title: "Chatx.vn Buid AI Agent",
 
   // other metadata
-  description: "This is Home for Solid Pro"
+  description: "AI Agent - No Code"
 };
 
 export default function Home() {
   return (
+    
     <main>
       <Hero />
       <Brands />
