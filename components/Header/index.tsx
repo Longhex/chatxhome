@@ -128,7 +128,7 @@ const Header = () => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-primary">
+                          <li key={key} className="hover:text-black">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -139,8 +139,8 @@ const Header = () => {
                       href={`${menuItem.path}`}
                       className={
                         pathUrl === menuItem.path
-                          ? "text-primary hover:text-primary"
-                          : "hover:text-primary"
+                          ? "text-black hover:text-black/80"
+                          : "hover:text-black/80"
                       }
                     >
                       {menuItem.title}
@@ -156,14 +156,14 @@ const Header = () => {
 
             <Link
               href="https://app.chatx.vn/signin"
-              className="text-regular font-medium text-waterloo hover:text-primary"
+              className="text-regular font-medium text-waterloo hover:text-black"
             >
               Đăng nhập
             </Link>
 
             <Link
               href="https://app.chatx.vn/install"
-              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
+              className="flex items-center justify-center rounded-full bg-black px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-black/80 dark:bg-white dark:hover:bg-black/80"
             >
               Đăng ký 🔥
             </Link>

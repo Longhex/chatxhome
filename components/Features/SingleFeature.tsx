@@ -44,7 +44,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         </div>
         <button
           onClick={handleClick}
-          className="group relative inline-flex h-11 cursor-pointer items-center justify-center rounded-[10px] border-0 bg-primary px-8 py-2 font-medium text-white transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 w-full mt-4"
+          className="group relative inline-flex h-11 cursor-pointer items-center justify-center rounded-[10px] border-0 bg-black px-8 py-2 font-medium text-white transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 w-full mt-4"
         >
           Chat thử
         </button>
