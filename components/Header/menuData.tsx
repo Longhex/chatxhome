@@ -14,16 +14,10 @@ const menuData: Menu[] = [
     path: "/#features",
   },
   {
-    id: 2.1,
-    title: "Blog",
-    newTab: false,
-    path: "/blog",
-  },
-  {
-    id: 2.3,
+    id: 3,
     title: "Docs",
     newTab: false,
-    path: "/docs",
+    path: "https://developer.chatx.vn/",
   },
   // {
   //   id: 3,
@@ -76,7 +70,7 @@ const menuData: Menu[] = [
     path: "/support",
   },
   {
-    id: 4,
+    id: 5,
     title: "Bảng giá",
     newTab: false,
     path: "/pricing",

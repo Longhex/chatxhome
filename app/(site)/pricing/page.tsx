@@ -1,5 +1,7 @@
 import React from "react";
+import Link from "next/link";
 import type { Metadata } from 'next';
+
 export const metadata: Metadata = {
   title: "Pricing Page - Solid SaaS Boilerplate",
   description: "This is the Pricing page for Solid Pro",
@@ -30,9 +32,12 @@ const PricingPage = () => {
             <li>Số lượng phần mềm CRM tích hợp: Không hỗ trợ</li>
             <li>Chi phí khởi tạo: Miễn phí</li>
           </ul>
-          <button className="bg-black text-white rounded-[20px] px-4 py-2 w-full mt-auto">
+          <Link
+            href="/payment"
+            className="bg-black text-white rounded-[20px] px-4 py-2 w-full mt-auto text-center block"
+          >
             Mua ngay
-          </button>
+          </Link>
         </div>
 
         {/* Gói Doanh Nghiệp */}
@@ -53,9 +58,12 @@ const PricingPage = () => {
             <li>Số lượng phần mềm CRM tích hợp: 1</li>
             <li>Chi phí khởi tạo: Miễn phí</li>
           </ul>
-          <button className="bg-black text-white rounded-[20px] px-4 py-2 w-full mt-auto">
+          <Link
+            href="/payment"
+            className="bg-black text-white rounded-[20px] px-4 py-2 w-full mt-auto text-center block"
+          >
             Mua ngay
-          </button>
+          </Link>
         </div>
 
         {/* Gói Tập Đoàn Lớn */}
@@ -77,9 +85,12 @@ const PricingPage = () => {
             <li>Chi phí khởi tạo: Thỏa thuận</li>
             <li>Quyền lợi đặc biệt: Giải pháp tùy chỉnh theo nhu cầu doanh nghiệp</li>
           </ul>
-          <button className="bg-black text-white rounded-[20px] px-4 py-2 w-full mt-auto">
+          <Link
+            href="/payment"
+            className="bg-black text-white rounded-[20px] px-4 py-2 w-full mt-auto text-center block"
+          >
             Liên hệ ngay
-          </button>
+          </Link>
         </div>
       </div>
     </div>
