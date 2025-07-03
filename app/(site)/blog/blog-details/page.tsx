@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState } from "react";
-import { doc, getDoc } from "firebase/firestore";
-import { db } from "@/lib/firebaseConfig";
-import { useSearchParams } from "next/navigation";
+import React, { useEffect, useState, Suspense } from 'react';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '@/lib/firebaseConfig';
+import { useSearchParams } from 'next/navigation';
 
 interface Blog {
   id: string;
@@ -13,27 +13,28 @@ interface Blog {
   cover: string;
 }
 
-const BlogDetails = () => {
+// Component con để dùng useSearchParams
+const BlogContent = () => {
   const [blog, setBlog] = useState<Blog | null>(null);
   const searchParams = useSearchParams();
-  const id = searchParams.get("id");
+  const id = searchParams.get('id');
 
   useEffect(() => {
     const fetchBlogDetails = async () => {
       try {
         if (id) {
-          const docRef = doc(db, "blog", id);
+          const docRef = doc(db, 'blog', id);
           const docSnap = await getDoc(docRef);
 
           if (docSnap.exists()) {
             const blogData = docSnap.data() as Blog;
             setBlog(blogData);
           } else {
-            console.error("No such document!");
+            console.error('No such document!');
           }
         }
       } catch (error) {
-        console.error("Error fetching blog details:", error);
+        console.error('Error fetching blog details:', error);
       }
     };
 
@@ -64,4 +65,18 @@ const BlogDetails = () => {
   );
 };
 
-export default BlogDetails;
+const BlogDetailsPage = () => {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center h-screen">
+          <p className="text-lg font-medium text-gray-600">Loading...</p>
+        </div>
+      }
+    >
+      <BlogContent />
+    </Suspense>
+  );
+};
+
+export default BlogDetailsPage;
